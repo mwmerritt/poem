@@ -50,7 +50,7 @@ pub(crate) fn create_html(document: &str) -> String {
         .replace("{:spec}", document)
 }
 
-pub(crate) fn create_endpoint(document: &str) -> impl Endpoint {
+pub fn create_endpoint(document: &str) -> impl Endpoint {
     let ui_html = create_html(document);
     poem::Route::new()
         .at("/", make_sync(move |_| Html(ui_html.clone())))

@@ -8,7 +8,7 @@ use std::{
 };
 
 use poem::http::Method;
-pub(crate) use ser::Document;
+pub use ser::Document;
 use serde::{ser::SerializeMap, Serialize, Serializer};
 use serde_json::Value;
 

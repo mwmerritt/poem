@@ -76,14 +76,14 @@ impl<'a> Serialize for WebhookMap<'a> {
     }
 }
 
-pub(crate) struct Document<'a> {
-    pub(crate) info: &'a MetaInfo,
-    pub(crate) servers: &'a [MetaServer],
-    pub(crate) apis: Vec<MetaApi>,
-    pub(crate) webhooks: Vec<MetaWebhook>,
-    pub(crate) registry: Registry,
-    pub(crate) external_document: Option<&'a MetaExternalDocument>,
-    pub(crate) url_prefix: Option<&'a str>,
+pub struct Document<'a> {
+    pub info: &'a MetaInfo,
+    pub servers: &'a [MetaServer],
+    pub apis: Vec<MetaApi>,
+    pub webhooks: Vec<MetaWebhook>,
+    pub registry: Registry,
+    pub external_document: Option<&'a MetaExternalDocument>,
+    pub url_prefix: Option<&'a str>,
 }
 
 impl<'a> Serialize for Document<'a> {
