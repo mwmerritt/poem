@@ -137,7 +137,7 @@ pub mod types;
 #[doc(hidden)]
 pub mod validation;
 
-mod base;
+pub mod base;
 mod openapi;
 mod path_util;
 #[cfg(any(
@@ -146,7 +146,7 @@ mod path_util;
     feature = "redoc",
     feature = "openapi-explorer"
 ))]
-mod ui;
+pub mod ui;
 pub use ui::swagger_ui;
 
 pub use base::{
