@@ -147,10 +147,11 @@ mod path_util;
     feature = "openapi-explorer"
 ))]
 mod ui;
+pub use ui::swagger_ui;
 
 pub use base::{
     ApiExtractor, ApiExtractorType, ApiResponse, ExtractParamOptions, OAuthScopes, OpenApi,
-    OperationId, ResponseContent, Tags, Webhook,
+    OperationId, ResponseContent, Tags, Webhook, UrlQuery,
 };
 pub use openapi::{
     ContactObject, ExternalDocumentObject, ExtraHeader, LicenseObject, OpenApiService, ServerObject,
