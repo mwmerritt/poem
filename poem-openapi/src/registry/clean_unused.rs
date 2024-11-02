@@ -65,7 +65,7 @@ impl<'a> Document<'a> {
         }
     }
 
-    pub(crate) fn remove_unused_schemas(&mut self) {
+    pub fn remove_unused_schemas(&mut self) {
         let mut used_types = UsedTypes::new();
 
         for api in self.apis.iter() {
